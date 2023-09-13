@@ -19,10 +19,10 @@ function DogList() {
   return (
     <div>
       <h1>10 tilfældige hunde</h1>
-      <ul>
+      <ul className="image-container">
         {dogs.map((dog) => (
           <li key={dog.id}>
-            <img src={dog.url} alt="Hundebillede" />
+            <img  src={dog.url} alt="Hundebillede" className="dogs" />
           </li>
         ))}
       </ul>
