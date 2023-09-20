@@ -30,6 +30,10 @@ function Navbar() {
             </ul>
           )}
         </li>
+        <li>
+            <Link to="/log-in">Log In</Link>
+            <Link to="/sign-up">Sign Up</Link>
+        </li>
       </ul>
     </nav>
   );
