@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-
-
-
 export function RandomDogs() {
   const [dogs, setDogs] = useState([]);
   const [breeds, setBreeds] = useState([]);
@@ -44,7 +41,7 @@ export function RandomDogs() {
           const breed = findBreedByReferenceId(dog.id);
 
           return (
-            <li key={dog.id}>
+            <li key={dog.id} className='dog-card'>
               <img src={dog.url} alt="Hundebillede" className="dogs" />
               {breed && <p>Breed: {breed.name}</p>}
             </li>
@@ -73,10 +70,10 @@ export function ShibaInu() {
       }, []);
     
       return (
-        <div>
+        <div className='container-of-image-container'>
           <ul className="image-container">
             {dogs.map((dog) => (
-              <li key={dog.id}>
+              <li className='specific-dog' key={dog.id}>
                 <img  src={dog.url} alt="Hundebillede" className="dogs" />
                 <div>
                      <p> RACE: {dog.breeds[0]?.name}</p>
@@ -110,7 +107,7 @@ export function AlaskanHusky() {
         <div>
           <ul className="image-container">
             {dogs.map((dog) => (
-              <li key={dog.id}>
+              <li className='specific-dog' key={dog.id}>
                 <img  src={dog.url} alt="Hundebillede" className="dogs" />
                 <div>
                      <p> RACE: {dog.breeds[0]?.name}</p>
@@ -144,7 +141,7 @@ export function Affenpinscher() {
         <div>
           <ul className="image-container">
             {dogs.map((dog) => (
-              <li key={dog.id}>
+              <li className='specific-dog'key={dog.id}>
                 <img  src={dog.url} alt="Hundebillede" className="dogs" />
                 <div>
                      <p> RACE: {dog.breeds[0]?.name}</p>
