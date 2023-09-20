@@ -2,12 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import DogList from './Doglist';
+import {RandomDogs, ShibaInu, Affenpinscher, AlaskanHusk} from './Doglist';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <DogList />
+    <App />
   </React.StrictMode>
 );
 
